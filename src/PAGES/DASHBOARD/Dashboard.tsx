@@ -20,7 +20,7 @@ interface DashboardInfoInterface {
 
 export interface UserInterface {
   id: string;
-  name: string;
+  fullName: string;
   email: string;
   phoneNumber: string;
   dateJoined: string;

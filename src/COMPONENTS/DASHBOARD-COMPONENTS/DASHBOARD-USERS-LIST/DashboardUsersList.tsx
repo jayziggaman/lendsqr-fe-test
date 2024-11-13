@@ -18,7 +18,7 @@ import Loading from '../../GENERAL-COMPONENTS/LOADING/Loading';
 
 interface FilterParametersInterface {
   organization: string;
-  name: string;
+  fullName: string;
   emailAddress: string;
   dateJoined: string;
   phoneNumber: string;
@@ -103,7 +103,7 @@ const DashboardUsersList = () => {
   // This filterParameters variable holds the data gotten from the URL searchParams. It is updated everytime searchParams changes.
   const [filterParameters, setFilterParameters] = useState<FilterParametersInterface>({
     organization: searchParams.get('organization') || '',
-    name: searchParams.get('name') || '',
+    fullName: searchParams.get('name') || '',
     emailAddress: searchParams.get('email') || '',
     status: searchParams.get('status') || '',
     dateJoined: searchParams.get('date') || '',
@@ -698,13 +698,13 @@ const DashboardFilter = () => {
   // Different filterParameters. In this component, this variable only holds data gotten from the inputs fields and sets them in searchParams when the filterUsers function runs
   const [filterParameters, setFilterParameters] = useState<FilterParametersInterface>({
     organization: '',
-    name: '',
+    fullName: '',
     emailAddress: '',
     status: '',
     dateJoined: '',
     phoneNumber: ''
   })
-  const { name, emailAddress, dateJoined, status, phoneNumber, organization } = filterParameters
+  const { fullName, emailAddress, dateJoined, status, phoneNumber, organization } = filterParameters
 
 
   const resetFilters = () => {
@@ -757,8 +757,8 @@ const DashboardFilter = () => {
       <label htmlFor="username-filter">
         Username
         <input type="text" name="username-filter" id="username-filter" placeholder='User'
-          value={name} 
-          onChange={e => setFilterParameters({...filterParameters, name: e.target.value})}
+          value={fullName} 
+          onChange={e => setFilterParameters({...filterParameters, fullName: e.target.value})}
         />
       </label>
 
