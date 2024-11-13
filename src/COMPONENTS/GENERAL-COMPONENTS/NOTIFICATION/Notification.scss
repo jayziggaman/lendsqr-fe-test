@@ -1,0 +1,78 @@
+@import "../../../index.scss";
+
+
+div.notification {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  transform: translateX(-1000%);
+  width: calc(100vw - 4rem);
+  max-width: 25rem;
+  height: 4rem;
+  background-color: #fff;
+  border: 1px solid rgba(33, 63, 125, 0.1);
+  border-radius: 0.25rem;
+  box-shadow: $shadow;
+  z-index: -100;
+
+
+  &.active {
+    transform: translateX(0%);
+    z-index: 100;
+  }
+
+
+  
+  div.notification-div {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    font-size: 1rem;
+
+
+    button {
+      background-color: transparent;
+      border: none;
+
+
+      svg {
+        color: $other-blue;
+      }
+    }
+
+
+
+    span.notification-timer {
+      width: 100%;
+      position: absolute;
+      bottom: -0.25rem;
+      left: unset;
+      right: 0;
+      height: 0.25rem;
+      border-bottom-left-radius: 0.25rem;
+      border-bottom-right-radius: 0.25rem;
+    }
+  }
+}
+
+
+
+div.notification.good {
+  color: $green;
+
+  span.notification-timer {
+    background-color: $green;
+  }
+}
+
+
+
+div.notification.bad {
+  color: $red;
+
+  span.notification-timer {
+    background-color: $red;
+  }
+}

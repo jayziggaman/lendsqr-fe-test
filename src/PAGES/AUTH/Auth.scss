@@ -1,0 +1,163 @@
+@import "../../index.scss";
+
+main.auth-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100svh;
+
+
+  section.auth-main-section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1350px;
+    gap: 3rem 0;
+    align-items: end;
+    padding: 1rem;
+
+
+    div.auth-logo {
+      width: 100%;
+    }
+
+
+    div.auth-cartoon {
+      margin-left: -3rem;
+      width: 100%;
+
+
+      svg, rect {
+        width: 100%;
+      }
+    }
+
+
+    form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      gap: 3rem;
+  
+  
+      header.auth-form-header {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+  
+  
+        h1 {
+          color: $dark-blue;
+          font-weight: 700;
+          font-size: 2.5rem;
+        }
+  
+  
+        p {
+          color: $other-blue;
+          font-weight: 400;
+          font-size: 1.25rem;
+        }
+      }
+  
+  
+      div.auth-form-details {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+  
+  
+        label {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          border: 2px solid rgba(84, 95, 125, 0.15);
+          border-radius: 5px;
+          padding: 1rem;
+          height: 50px;
+        }
+  
+  
+        input {
+          border: none;
+          background-color: transparent;
+  
+  
+          &::placeholder {
+            font-weight: 400;
+            font-size: 0.9rem;
+            color: $other-blue;
+          }
+        }
+      }
+  
+  
+      button {
+        background-color: transparent;
+        border: none;
+        color: $light-blue;
+        font-weight: 600;
+        font-size: 0.75rem;
+  
+  
+        &.forgot-password-btn {
+          align-self: start;
+        }
+  
+  
+        &.log-in-btn {
+          background-color: $light-blue;
+          color: white;
+          padding: 1rem;
+          height: 50px;
+          border-radius: 0.5rem;
+          font-size: 0.9rem;
+          margin-top: 1rem;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+@media (min-width: 800px) {
+  main.auth-main {
+    section.auth-main-section {
+      display: grid;
+      grid-template-columns:  1.5fr 1fr;
+      padding: 3rem;
+
+
+      div.auth-logo {
+        grid-column: 1 / span 2;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+@media (min-width: 1000px) {
+  section.auth-main-section {
+    padding: 3rem 5rem !important; 
+  }
+}
+
+
+
+
+
+
+@media (min-width: 1200px) {
+  section.auth-main-section {
+    padding: 3rem 7.5rem !important; 
+  }
+}

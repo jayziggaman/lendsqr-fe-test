@@ -1,0 +1,21 @@
+@import "../../index.scss";
+
+
+main.not-found-main {
+  height: 100svh;
+  width: 100%;
+  background-color: $dark-bg;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+
+  b {
+    font-size: 2rem;
+  }
+
+  a {
+    font-size: 1.5rem;
+  }
+}

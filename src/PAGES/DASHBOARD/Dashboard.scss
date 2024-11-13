@@ -1,0 +1,33 @@
+@import "../../index.scss";
+
+main.dashboard-main {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1rem;
+  background-color: $dark-bg;
+  max-width: 100%;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 3rem;
+
+
+  section.dashboard-header,
+  section.dashboard-content {
+    position: relative;
+    width: 100%;
+    max-width: 1500px;
+  }
+}
+
+
+
+
+@media (min-width: 1000px) {
+  main.dashboard-main {
+    padding: 2rem;
+    gap: 3rem;
+  }
+}
+

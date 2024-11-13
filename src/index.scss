@@ -1,0 +1,72 @@
+$global-font: "Work Sans", sans-serif;
+$roboto: "Roboto", sans-serif;
+$dark-bg: #EAEAEA;
+$light-blue: #39cdcc;
+$dark-blue: #213F7D;
+$other-blue: #545F7D;
+$red: #E4033B;
+$gold: #E9B200;
+$shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+$green: rgba(57, 205, 98, 1);
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: $global-font;
+}
+
+
+main {
+  min-height: calc(100svh - 4.5rem);
+}
+
+
+img {
+  object-fit: cover;
+}
+
+
+a, button {
+  cursor: pointer;
+}
+
+
+span {
+  display: inline-block;
+}
+
+
+
+input, select {
+  &:focus {
+    border: none;
+    outline: none;
+  }
+}
+
+
+
+
+
+@media (min-width: 1400px) {
+  div#root {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+  }
+}
+
+
+
+
+
+
+
+@media (min-width: 1450px) {
+  main {
+    min-height: calc(100svh - 6.25rem);
+  }
+}
